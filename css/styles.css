@@ -2,7 +2,7 @@
 	--title-text-color: #212121;
 	--primary-text-color: #757575;
 	--accent-color: #2196f3;
-	--hover-accent-color: #188ce8;
+	--accent-hover-color: #188ce8;
 	--accent-text-color: #ffffff;
 	--hero-text-color: #ffffff;
 	--first-background-color: #ffffff;
@@ -67,6 +67,16 @@ textarea {
 	display: flex;
 }
 
+.link {
+	text-decoration: none;
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .header-border {
 	border-bottom: 1px solid #ececec;
 }
@@ -113,23 +123,7 @@ textarea {
 .logo--accent:hover,
 .logo__header:focus > .logo--accent,
 .logo__footer:focus > .logo--accent {
-	color: var(--hover-accent-color);
-}
-
-.link {
-	text-decoration: none;
-}
-
-.list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-/* TODO: */
-.title,
-.item-text {
-	margin: 0;
+	color: var(--accent-hover-color);
 }
 
 .navigation,
@@ -212,7 +206,6 @@ textarea {
 	background-color: var(--accent-color);
 }
 
-/* TODO: */
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -230,7 +223,7 @@ textarea {
 	background-position: center;
 }
 
-.hero-title {
+.hero__title {
 	margin-top: 0;
 	margin-bottom: 30px;
 	font-weight: 900;
@@ -241,51 +234,31 @@ textarea {
 	color: var(--hero-text-color);
 }
 
-.button {
-	border-radius: 4px;
-}
-
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
-
-.feature-section {
-	padding-top: 94px;
-}
-
-.filter-list {
-	display: flex;
-	margin-bottom: 50px;
+.form-button {
+	display: inline-flex;
+	width: 200px;
+	height: 50px;
 	justify-content: center;
-}
-
-.filter-list .button {
-	padding: 6px 22px;
-	border: none;
-	text-align: center;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.62; /* identical to box height, or 162% */
-	color: var(--title-text-color);
-	background-color: var(--button-background-color);
-	cursor: pointer;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter-item:not(:last-child) {
-	margin-right: 8px;
-}
-
-.filter-list .button:hover,
-.filter-list .button:focus {
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	color: var(--hero-text-color);
+	align-items: center;
 	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border: none;
+	border-radius: 4px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.06em;
+	color: #ffffff;
+	cursor: pointer;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-title {
+.form-button:hover,
+.form-button:focus {
+	background-color: var(--accent-hover-color);
+}
+
+.section__title {
 	margin-top: 0;
 	margin-bottom: 50px;
 	font-weight: 700;
@@ -295,7 +268,7 @@ textarea {
 	color: var(--title-text-color);
 }
 
-.section-title.invisible {
+.invisible {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -306,33 +279,19 @@ textarea {
 	overflow: hidden;
 }
 
-.feature-item {
+.feature {
+	padding-top: 94px;
+}
+
+.feature__item {
 	width: calc((100%-3 * 30px) / 4);
 }
 
-.feature-item:not(:last-child) {
+.feature__item:not(:last-child) {
 	margin-right: 30px;
 }
 
-.feature-item > .title {
-	font-size: 14px;
-	letter-spacing: 0.03em;
-}
-
-.feature-list .title {
-	font-weight: 700;
-	line-height: 1.14;
-	text-transform: uppercase;
-	color: var(--title-text-color);
-}
-
-.feature-list .item-text {
-	line-height: 24px; /* or 171% */
-	color: var(--primary-text-color);
-	margin-top: 10px;
-}
-
-.feature-box {
+.feature__wrap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -342,20 +301,41 @@ textarea {
 	border-radius: 4px;
 }
 
-.what-list {
+.feature__title {
+	margin: 0;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--title-text-color);
+}
+
+.feature__text {
+	line-height: 24px;
+	color: var(--primary-text-color);
+	margin: 10px 0 0;
+}
+
+.work {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.work__list {
 	flex-wrap: wrap;
 }
 
-.what-item {
+.work__item {
 	width: calc((100% - 2 * 30px) / 3);
 	position: relative;
 }
 
-.what-item:not(:nth-child(3n)) {
+.work__item:not(:nth-child(3n)) {
 	margin-right: 30px;
 }
 
-.what-item::before {
+.work__item::before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -365,7 +345,7 @@ textarea {
 	background-color: rgba(47, 48, 58, 0.8);
 }
 
-.what-text {
+.work__text {
 	position: absolute;
 	bottom: 27px;
 	width: 100%;
@@ -377,26 +357,21 @@ textarea {
 	color: var(--accent-text-color);
 }
 
-.team-list {
+.team-background {
+	background-color: var(--second-background-color);
+}
+
+.team {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.team__list {
 	flex-wrap: wrap;
 }
 
-.team-list .title {
-	margin-bottom: 10px;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.19; /* identical to box height */
-	color: var(--title-text-color);
-}
-
-.team-list .item-text {
-	margin-bottom: 16px;
-	font-size: 16px;
-	line-height: 1.19; /* identical to box height */
-	color: var(--primary-text-color);
-}
-
-.team-list > .item {
+.team__item {
+	margin: 0;
 	width: calc((100% - 30px * 3) / 4);
 	text-align: center;
 	background-color: var(--first-background-color);
@@ -404,13 +379,28 @@ textarea {
 	border-radius: 0px 0px 4px 4px;
 }
 
-.team-list > .item:not(:nth-child(4n)) {
+.team__item:not(:nth-child(4n)) {
 	margin-right: 30px;
 }
 
-.team-card {
+.team__card {
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+
+.team__title {
+	margin: 0 0 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19; /* identical to box height */
+	color: var(--title-text-color);
+}
+
+.team__text {
+	margin: 0 0 16px;
+	font-size: 16px;
+	line-height: 1.19; /* identical to box height */
+	color: var(--primary-text-color);
 }
 
 .net-list {
@@ -418,7 +408,11 @@ textarea {
 	align-items: center;
 }
 
-.net-link {
+.net-list__item:not(:last-child) {
+	margin-right: 10px;
+}
+
+.net-list__link {
 	display: flex;
 	width: 44px;
 	height: 44px;
@@ -430,24 +424,29 @@ textarea {
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.net-link:hover,
-.net-link:focus {
+.net-list__link:hover,
+.net-list__link:focus {
 	background-color: var(--accent-color);
 	fill: var(--accent-text-color);
 }
 
-.net-list .item:not(:last-child) {
-	margin-right: 10px;
-}
-
-.net-icon {
+.net-list__icon {
 	width: 20px;
 	height: 20px;
 }
 
-.team-background {
-	background-color: var(--second-background-color);
+/* TODO: */
+.title,
+.text {
+	margin: 0;
 }
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+/* TODO: */
+
 
 .clients-list {
 	flex-wrap: wrap;
@@ -702,34 +701,14 @@ textarea {
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.form-button {
-	display: inline-flex;
-	width: 200px;
-	height: 50px;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--accent-color);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border: none;
-	border-radius: 4px;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 30px;
-	letter-spacing: 0.06em;
-	color: #ffffff;
-	cursor: pointer;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .user-email:hover,
 .user-email:focus {
 	border-color: var(--accent-color);
 }
 
-.form-button:hover,
-.form-button:focus {
-	background-color: var(--hover-accent-color);
-}
+
 
 .footer-send-icon {
 	margin-left: 10px;
@@ -962,6 +941,39 @@ textarea {
 	background-image: url(../images/icons/check.svg);
 }
 
+
+/* TODO: */
+.filter-list {
+	display: flex;
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.filter-list .button {
+	padding: 6px 22px;
+	border: none;
+	text-align: center;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62; /* identical to box height, or 162% */
+	color: var(--title-text-color);
+	background-color: var(--button-background-color);
+	cursor: pointer;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.filter-list .button:hover,
+.filter-list .button:focus {
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	color: var(--hero-text-color);
+	background-color: var(--accent-color);
+}
+/* TODO: */
 /* 
 ;(() => {
 	const menuBtnRef = document.querySelector("[data-menu-button]")
