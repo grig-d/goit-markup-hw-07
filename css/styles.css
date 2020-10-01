@@ -63,6 +63,11 @@ textarea {
 	margin-right: auto;
 }
 
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
 .flexbox {
 	display: flex;
 }
@@ -317,11 +322,6 @@ textarea {
 	margin: 10px 0 0;
 }
 
-.work {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
-
 .work__list {
 	flex-wrap: wrap;
 }
@@ -359,11 +359,6 @@ textarea {
 
 .team-background {
 	background-color: var(--second-background-color);
-}
-
-.team {
-	padding-top: 94px;
-	padding-bottom: 94px;
 }
 
 .team__list {
@@ -439,11 +434,6 @@ textarea {
 .title,
 .text {
 	margin: 0;
-}
-
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
 }
 /* TODO: */
 
