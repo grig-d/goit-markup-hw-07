@@ -336,6 +336,7 @@
 		</main>
 		<footer class="footer-background">
 			<div class="container flexbox footer">
+				<!-- address block-->
 				<div class="address-wrap">
 					<!-- logo -->
 					<a href="./index.html" class="logo logo__footer link"><span class="logo--accent">Web</span>Studio</a>
@@ -347,54 +348,56 @@
 						</ul>
 					</address>
 				</div>
-				<div class="footer-join">
-					<p class="join-heading">присоединяйтесь</p>
-					<ul class="footer-net-list flexbox list">
-						<li class="item">
-							<a href="https://www.instagram.com/" class="footer-net-link" aria-label="ссылка на профиль в Instagram">
-								<svg class="footer-net-icon">
+				<!-- join block -->
+				<div class="join">
+					<p class="join__heading">присоединяйтесь</p>
+					<ul class="join__list flexbox list">
+						<li class="join__item">
+							<a href="https://www.instagram.com/" class="join__link" aria-label="ссылка на профиль в Instagram">
+								<svg class="join__icon">
 									<use href="./images/icons/sprite.svg#sprite-instagram"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="item">
-							<a href="https://twitter.com/" class="footer-net-link" aria-label="ссылка на профиль в Twitter">
-								<svg class="footer-net-icon">
+						<li class="join__item">
+							<a href="https://twitter.com/" class="join__link" aria-label="ссылка на профиль в Twitter">
+								<svg class="join__icon">
 									<use href="./images/icons/sprite.svg#sprite-twitter"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="item">
-							<a href="https://www.facebook.com/" class="footer-net-link" aria-label="ссылка на профиль в Facebook">
-								<svg class="footer-net-icon">
+						<li class="join__item">
+							<a href="https://www.facebook.com/" class="join__link" aria-label="ссылка на профиль в Facebook">
+								<svg class="join__icon">
 									<use href="./images/icons/sprite.svg#sprite-facebook"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="item">
-							<a href="https://www.linkedin.com/" class="footer-net-link" aria-label="ссылка на профиль в LinkedIn">
-								<svg class="footer-net-icon">
+						<li class="join__item">
+							<a href="https://www.linkedin.com/" class="join__link" aria-label="ссылка на профиль в LinkedIn">
+								<svg class="join__icon">
 									<use href="./images/icons/sprite.svg#sprite-linkedin"></use>
 								</svg>
 							</a>
 						</li>
 					</ul>
 				</div>
-				<div class="footer-submit">
-					<p class="join-heading">Подпишитесь на рассылку</p>
-					<form class="subscribe-form">
+				<!-- submit us block -->
+				<div class="subscribe">
+					<p class="subscribe__heading">Подпишитесь на рассылку</p>
+					<form class="subscribe__form">
 						<input
 							type="email"
 							name="user-email"
 							id="user-email"
-							class="user-email"
+							class="subscribe__email"
 							placeholder="E-mail"
 							required
 							autocomplete="off"
 						/>
 						<button class="form-button">
 							Подписаться
-							<svg class="footer-send-icon">
+							<svg class="subscribe__icon">
 								<use href="./images/icons/sprite.svg#sprite-footer-send"></use>
 							</svg>
 						</button>
@@ -407,49 +410,49 @@
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal-window">
 				<button class="close-button" type="button" data-modal-close>
-					<svg class="close-icon">
+					<svg class="close-button__icon">
 						<use href="./images/icons/sprite.svg#sprite-close"></use>
 					</svg>
 				</button>
-				<p class="form-heading">Оставьте свои данные, мы вам перезвоним</p>
+				<p class="modal-window__heading">Оставьте свои данные, мы вам перезвоним</p>
 				<form class="form" id="contact-form">
-					<label class="label">
-						<span class="label-span">Имя</span>
+					<label class="form__label">
+						<span class="form__text">Имя</span>
 						<input
 							type="text"
 							name="user-name"
-							class="form-field"
+							class="form__field"
 							pattern="^[A-Za-zА-Яа-яЁёЇїЄєІі\s]+$"
 							autocomplete="off"
 							required
 						/>
-						<svg class="input-icon-wrap">
+						<svg class="form__icon">
 							<use href="./images/icons/sprite.svg#sprite-form-person"></use>
 						</svg>
 					</label>
-					<label class="label">
-						<span class="label-span">Телефон</span>
-						<input type="tel" name="user-phone" class="form-field" pattern="[0-9]{10}" autocomplete="off" required />
-						<svg class="input-icon-wrap">
+					<label class="form__label">
+						<span class="form__text">Телефон</span>
+						<input type="tel" name="user-phone" class="form__field" pattern="[0-9]{10}" autocomplete="off" required />
+						<svg class="form__icon">
 							<use href="./images/icons/sprite.svg#sprite-form-phone"></use>
 						</svg>
 					</label>
-					<label class="label">
-						<span class="label-span">Почта</span>
-						<input type="email" name="user-email" class="form-field" autocomplete="off" />
-						<svg class="input-icon-wrap">
+					<label class="form__label">
+						<span class="form__text">Почта</span>
+						<input type="email" name="user-email" class="form__field" autocomplete="off" />
+						<svg class="form__icon">
 							<use href="./images/icons/sprite.svg#sprite-form-email"></use>
 						</svg>
 					</label>
-					<label class="label">
-						<span class="label-span">Комментарий</span>
-						<textarea name="user-message" class="form-field textarea" placeholder="Введите текст"></textarea>
+					<label class="form__label">
+						<span class="form__text">Комментарий</span>
+						<textarea name="user-message" class="form__field form__textarea" placeholder="Введите текст"></textarea>
 					</label>
-					<label class="deal-string">
+					<label class="form__deal">
 						<input type="checkbox" class="checkbox invisible" />
-						<span class="custom-checkbox"></span>
-						<span class="deal-text">Соглашаюсь с рассылкой и принимаю</span>
-						<a href="" class="deal-link">Условия договора</a>
+						<span class="form__custom-checkbox"></span>
+						<span class="form__accept">Соглашаюсь с рассылкой и принимаю</span>
+						<a href="" class="form__link">Условия договора</a>
 					</label>
 					<button class="form-button">Отправить</button>
 				</form>
