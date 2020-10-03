@@ -921,30 +921,19 @@ text-decoration: none;
 	cursor: pointer;
 }
 
-.checkbox.invisible {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0, 0, 0, 0);
-	overflow: hidden;
-}
-
-.checkbox:not(:checked) + .form__custom-checkbox {
+.form__checkbox:not(:checked) + .form__custom-checkbox {
 	border: 2px solid var(--title-text-color);
 	border-radius: 2px;
 }
 
-.checkbox:checked + .form__custom-checkbox {
+.form__checkbox:checked + .form__custom-checkbox {
 	border-color: transparent;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	background-image: url(../images/icons/check.svg);
 }
 
-.checkbox:not(:checked):hover + .form__custom-checkbox,
-.checkbox:not(:checked):focus + .form__custom-checkbox {
+.form__checkbox:not(:checked):hover + .form__custom-checkbox,
+.form__checkbox:not(:checked):focus + .form__custom-checkbox {
 	border-color: var(--accent-color);
 }
 
