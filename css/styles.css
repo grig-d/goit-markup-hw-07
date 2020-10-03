@@ -634,17 +634,17 @@ textarea {
 	fill: #ffffff;
 }
 
-
-/* TODO: */
-
-
-.filter-list {
+.filter {
 	display: flex;
 	margin-bottom: 50px;
 	justify-content: center;
 }
 
-.filter-list .button {
+.filter__item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.filter__button {
 	padding: 6px 22px;
 	border: none;
 	text-align: center;
@@ -653,43 +653,47 @@ textarea {
 	line-height: 1.62; /* identical to box height, or 162% */
 	color: var(--title-text-color);
 	background-color: var(--button-background-color);
+	border-radius: 4px;
 	cursor: pointer;
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-item:not(:last-child) {
-	margin-right: 8px;
-}
-
-.filter-list .button:hover,
-.filter-list .button:focus {
+.filter__button:hover,
+.filter__button:focus {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	color: var(--hero-text-color);
 	background-color: var(--accent-color);
 }
 
-.portfolio-item {
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+}
+.portfolio__item {
 	width: calc((100% - 30px * 2) / 3);
 	border: 1px solid #eeeeee;
 	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:not(:nth-child(3n)) {
+.portfolio__item:not(:nth-child(3n)) {
 	margin-right: 30px;
 }
 
-.portfolio-item:not(:nth-last-child(-n + 3)) {
+.portfolio__item:not(:nth-last-child(-n + 3)) {
 	margin-bottom: 30px;
 }
 
-.portfolio-list {
-	display: flex;
-	flex-wrap: wrap;
+.portfolio__link {
+text-decoration: none;
 }
 
-.portfolio-item .title {
-	margin-bottom: 4px;
+.portfolio__card {
+	padding: 20px 24px;
+}
+
+.portfolio__title {
+	margin: 0 0 4px;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2; /* identical to box height, or 200% */
@@ -697,22 +701,19 @@ textarea {
 	color: var(--title-text-color);
 }
 
-.portfolio-item .item-text {
+.portfolio__text {
+	margin: 0;
 	font-size: 16px;
 	line-height: 1.87; /* identical to box height, or 187% */
 	color: var(--primary-text-color);
 }
 
-.portfolio-card {
-	padding: 20px 24px;
-}
-
-.item-overlay {
+.overlay {
 	position: relative;
 	overflow: hidden;
 }
 
-.item-overlay::before {
+.overlay::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -725,7 +726,7 @@ textarea {
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.text-wrap {
+.overlay__wrap {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -738,28 +739,24 @@ textarea {
 	transform: translateY(100%);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.text-overlay {
+.overlay__text {
 	color: var(--accent-text-color);
 	font-size: 18px;
 	line-height: 1.556;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus-within {
+.portfolio__item:hover,
+.portfolio__item:focus-within {
 	border: 1px solid rgba(0, 0, 0, 0.16);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item .link:hover .item-overlay::before,
-.portfolio-item .link:focus .item-overlay::before,
-.portfolio-item .link:hover .text-wrap,
-.portfolio-item .link:focus .text-wrap {
+.portfolio__link:hover .overlay::before,
+.portfolio__link:focus .overlay::before,
+.portfolio__link:hover .overlay__wrap,
+.portfolio__link:focus .overlay__wrap {
 	transform: translateY(0);
 }
-
-
-/* TODO: */
-
 
 .backdrop {
 	position: fixed;
@@ -968,9 +965,6 @@ textarea {
 	color: var(--accent-color);
 }
 
-/* title
-item */
-/* Experiment Page */
 /* 
 ;(() => {
 	const menuBtnRef = document.querySelector("[data-menu-button]")
