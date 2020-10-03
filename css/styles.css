@@ -87,13 +87,11 @@ textarea {
 }
 
 .header {
+	justify-content: flex-end;
 	align-items: center;
 	padding-top: 25px;
 	padding-bottom: 25px;
-}
-
-.flexbox.header {
-	justify-content: flex-end;
+	
 }
 
 .navigation-box {
