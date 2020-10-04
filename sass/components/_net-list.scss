@@ -16,13 +16,13 @@
 	align-items: center;
 	background-color: transparent;
 	fill: #afb1b8;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+	transition: background-color $transition-time $transition-function, fill $transition-time $transition-function;
 
-.net-list__link:hover,
-.net-list__link:focus {
-	background-color: $accent-color;
-	fill: $accent-text-color;
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+		fill: $accent-text-color;
+	}
 }
 
 .net-list__icon {

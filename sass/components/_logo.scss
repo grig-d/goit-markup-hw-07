@@ -18,11 +18,12 @@
 
 .logo--accent {
 	color: $accent-color;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+	transition: color $transition-time $transition-function;
 
-.logo--accent:hover,
-.logo__header:focus > .logo--accent,
-.logo__footer:focus > .logo--accent {
-	color: $accent-hover-color;
+	.logo__header:hover > &,
+	.logo__header:focus > &,
+	.logo__footer:hover > &,
+	.logo__footer:focus > & {
+		color: $accent-hover-color;
+	}
 }

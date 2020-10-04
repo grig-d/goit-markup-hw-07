@@ -4,10 +4,10 @@
 
 .feature__item {
 	width: calc((100%-3 * 30px) / 4);
-}
 
-.feature__item:not(:last-child) {
-	margin-right: 30px;
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
 }
 
 .feature__wrap {
