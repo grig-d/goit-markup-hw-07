@@ -263,14 +263,6 @@ textarea {
   resize: none;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .flexbox {
   display: flex;
 }
@@ -396,21 +388,6 @@ textarea {
 .close-button:hover .close-button__icon,
 .close-button:focus .close-button__icon {
   fill: #2196f3;
-}
-
-.current-page {
-  color: #2196f3;
-}
-
-.current-page::after {
-  position: absolute;
-  bottom: -32px;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196f3;
 }
 
 .net-list {
@@ -610,6 +587,14 @@ textarea {
 .backdrop.is-hidden .modal-window {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
@@ -1161,5 +1146,20 @@ textarea {
   width: 24px;
   height: 24px;
   fill: #ffffff;
+}
+
+.current-page {
+  color: #2196f3;
+}
+
+.current-page::after {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
 }
 /*# sourceMappingURL=main.css.map */

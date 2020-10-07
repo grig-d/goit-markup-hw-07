@@ -3,10 +3,10 @@
 @import "./base/common";
 @import "./components/logo";
 @import "./components/buttons";
-@import "./components/current-page";
 @import "./components/net-list";
 @import "./components/form";
 @import "./components/modal";
+@import "./layouts/container";
 @import "./layouts/section";
 @import "./layouts/header";
 @import "./layouts/hero";
@@ -17,3 +17,7 @@
 @import "./layouts/filter";
 @import "./layouts/portfolio";
 @import "./layouts/footer";
+@import "./components/address";
+@import "./components/join";
+@import "./components/subscribe";
+@import "./components/current-page";
