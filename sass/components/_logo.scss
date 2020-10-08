@@ -2,14 +2,22 @@
 	font-family: "Raleway", sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.19;
+	font-size: 24px;
+	line-height: 1.167;
 	letter-spacing: 0.03em;
+
+	@media screen and (min-width: $desktop) {
+		font-size: 26px;
+		line-height: 1.192;
+	}
 }
 
 .logo__header {
-	margin-right: 93px;
 	color: $header-logo-color;
+
+	@media screen and (min-width: $desktop) {
+		margin-right: 93px;
+	}
 }
 
 .logo__footer {
