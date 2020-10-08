@@ -629,14 +629,14 @@ textarea {
 }
 
 .header {
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
 .navigation-box {
-  display: none;
+  display: flex;
   align-items: center;
   margin-right: auto;
 }
